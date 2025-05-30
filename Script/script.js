@@ -27,3 +27,20 @@ document.querySelectorAll(".nav-bar a").forEach((link) => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const questions = document.querySelectorAll(".questions");
+
+  questions.forEach((question) => {
+    const header = question.querySelector(".question-header");
+    header.addEventListener("click", () => {
+      question.classList.toggle("active");
+
+      // Close other open questions (optional)
+      questions.forEach((q) => {
+        if (q !== question && q.classList.contains("active")) {
+          q.classList.remove("active");
+        }
+      });
+    });
+  });
+});
