@@ -2,8 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 100px;
+}
 .header {
   position: fixed;
   top: 0;
@@ -75,6 +81,9 @@
   font-weight: bold;
   border: none;
   border-radius: 4px;
+}
+.logo-icon p {
+  font-size: 1.5rem;
 }
 .hero-section {
   width: 100%;
@@ -165,22 +174,21 @@
   align-items: center;
   gap: 1.5rem;
   width: 100%;
-  max-width: 1200px; /* Added max-width for larger screens */
-  margin: 0 auto; /* Center the cards container */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
   background-color: #c4e6d5;
   width: 100%;
-  max-width: 400px; /* Limit card width on mobile */
+  max-width: 400px;
   padding: 1.5rem;
-  border-radius: 12px; /* Slightly larger radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
+  transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -593,7 +601,10 @@
   .hero-section {
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(
+        rgba(228, 221, 221, 0.3),
+        rgba(192, 174, 174, 0.2)
+      ),
       url("../assets/hero111.jpg") center/cover no-repeat;
     color: white;
     justify-content: center;
